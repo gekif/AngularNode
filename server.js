@@ -16,6 +16,8 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(4600, (req, res) => {
-  console.log('RUNNING');
+const port = process.env.PORT || 4600;
+
+app.listen(port, (req, res) => {
+  console.log(`RUNNING on port ${port}`);
 });
